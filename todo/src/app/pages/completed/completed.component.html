@@ -1,0 +1,17 @@
+<h1> <a routerLink="/home">My Todo List</a></h1>
+
+<div class="center"><a routerLink="/home">Create ToDo</a></div>
+<div class="table-center">
+<table>
+  <tr>Completed Task</tr>
+  <tr *ngFor="let list of lists">
+    <td>{{list.task}}</td>
+    <td>
+    <a [routerLink]="['/edit', 'list.id']"> Edit</a>
+    <button (click)="deleteList(list)">Delete</button>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div *ngIf="!lists.length" class="loading">Caricamento in corso...</div>
