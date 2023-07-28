@@ -19,5 +19,40 @@ p{
   justify-content: center;
 }
 
+input{
+  border-radius: 20px;
+  border: none;
+  margin-right: 5px;
+  height: 30px;
+  width: 300px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button{
+  background-color: #202A44;
+  border: 1px solid white;
+  color: white;
+  border-radius: 20px;
+  width: 70px;
+  height: 30px;
+  &:hover{
+    background-color: coral;
+  }
+}
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 
 
+.modal{
+  color: white;
+  text-align: center;
+  padding-top: 3%;
+}

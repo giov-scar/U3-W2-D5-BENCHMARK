@@ -15,7 +15,65 @@ h1{
   margin-top: 2em;
 }
 
+.taskList{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px auto;
+}
+.editArea{
+  display: flex;
+  justify-content: space-between;
+    width: 130px;
+}
+button{
+  background-color: #202A44;
+  border: 1px solid white;
+  color: white;
+  border-radius: 20px;
+  width: 70px;
+  height: 30px;
+  &:hover{
+    background-color: coral;
+  }
+}
+
 .loading{
   color: white;
   text-align: center;
 }
+
+.progress{
+  position: relative;
+  left: 45%;
+  height: 10px;
+  width: 10%;
+  border: 10px solid #f4a261;
+  border-radius: 15px;
+  margin-top: 2%;
+}
+.progress .color{
+  position: absolute;
+  background-color: #ffffff;
+  width: 0px;
+  height: 10px;
+  border-radius: 15px;
+  animation: progres 4s infinite linear;
+}
+@keyframes progres{
+  0%{
+    width: 0%;
+  }
+  25%{
+      width: 50%;
+  }
+  50%{
+      width: 75%;
+  }
+  75%{
+      width: 85%;
+  }
+  100%{
+      width: 100%;
+  }
+};

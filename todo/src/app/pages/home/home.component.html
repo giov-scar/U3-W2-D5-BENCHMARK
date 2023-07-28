@@ -1,18 +1,19 @@
 <h1>My Todo List</h1>
-<p>Create a new todo or see your <a routerLink="/completed">Completed task</a></p>
+<p>Create a new todo or see your <a routerLink="/completed">Completed Tasks</a></p>
 <div class="container">
   <form class="form-control-material">
     <input type="text" name="task" [(ngModel)]="newList.task" placeholder="Insert new ToDo" class="form-control">
-    <button (click)="addList()" [disabled]="check()" class="btn">Add</button>
+    <button (click)="addList()" [disabled]="check()" class="btn" >Add</button>
+    <div *ngIf="message" class="modal">{{message}}</div>
   </form>
 
-  <div *ngIf="message" class="modal">{{message}}</div>
+
 
 </div>
 
 <div class="tasks">
   <h2>Your Tasks</h2>
   <ul *ngFor="let list of lists">
-    <li>{{list.task}}</li>
+    <li>{{list.task}} <a routerLink="/completed"><button>Complete</button></a></li>
   </ul>
 </div>
