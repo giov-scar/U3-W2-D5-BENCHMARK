@@ -9,7 +9,7 @@ import { TodoService } from 'src/app/todo.service';
   styleUrls: ['./edit.component.scss']
 })
 export class EditComponent {
-  list:List = new List('',0);
+  list:List = new List(0,'',false);
 
   constructor(
     private listSvc:TodoService,

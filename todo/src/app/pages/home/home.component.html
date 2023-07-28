@@ -14,6 +14,6 @@
 <div class="tasks">
   <h2>Your Tasks</h2>
   <ul *ngFor="let list of lists">
-    <li>{{list.task}} <a routerLink="/completed"><button>Complete</button></a></li>
+    <li>{{list.task}} <button (click)="completedList(list)">Complete</button></li>
   </ul>
 </div>

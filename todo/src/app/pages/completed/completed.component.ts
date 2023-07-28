@@ -16,14 +16,16 @@ export class CompletedComponent {
     ngOnInit() {
       this.listSvc.getTodos()
       .then(list => {
-        this.lists = list;
+        this.lists = list.filter(el=> el.completed === true)
       })
     }
 
     deleteList(list: List) {
+      list.completed = false
       this.listSvc.delete(list)
-      .then(() => {
-        this.lists = this.lists.filter(list => list.id != list.id)
-      })
+      .then((res) => {
+        console.log(res);
+
+      }), this.lists = this.lists.filter(el=> el.completed === true)
     }
 }

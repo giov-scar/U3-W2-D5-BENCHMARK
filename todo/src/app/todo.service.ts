@@ -17,7 +17,7 @@ export class TodoService {
     return fetch(this.apiUrl+'?id='+id).then(res => res.json());
   }
 
-  create(task:Partial<List>): Promise<List> {
+  create(task:List): Promise<List> {
     return fetch(this.apiUrl, {
       method: 'POST',
       headers: {

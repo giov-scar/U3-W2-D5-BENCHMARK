@@ -1,12 +1,23 @@
 {
   "list": [
     {
-      "task": "prova",
-      "id": 1
+      "id": 6,
+      "task": "dfgfdg"
     },
     {
+      "id": 11,
+      "task": "prova",
+      "completed": false
+    },
+    {
+      "id": 13,
       "task": "spesa",
-      "id": 2
+      "completed": true
+    },
+    {
+      "id": 14,
+      "task": "dfgfdg",
+      "completed": false
     }
   ]
 }
